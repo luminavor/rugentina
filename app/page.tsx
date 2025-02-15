@@ -32,7 +32,7 @@ export default function LandingPage() {
       <main className="flex-grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
         <div className="flex items-center justify-center gap-2 mb-8">
-            <h2 className="text-xl font-bold text-[#2E3192]">{contractAddress}</h2>
+            <h2 className="text-xs md:text-xl font-bold text-[#2E3192]">{contractAddress}</h2>
             <button
               onClick={handleCopy}
               className="p-2 hover:bg-[#74ACDF]/10 rounded-full transition-colors"
