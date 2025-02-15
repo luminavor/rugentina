@@ -43,7 +43,7 @@ export default function LandingPage() {
               <span className="sr-only">Telegram</span>
             </Link>
             <Link
-              href="https://dexscreener.com"
+              href="https://dexscreener.com/solana/2eboayjwa246px4ayqtsq9h93twnrq8gquewleu83ssb"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#2E3192] hover:text-[#74ACDF] transition-colors"
