@@ -34,7 +34,7 @@ export default function LandingPage() {
               <span className="sr-only">Twitter</span>
             </Link>
             <Link
-              href="https://t.me/yapstertoken7"
+              href="https://t.me/+xtnGcKV8tjgwMjEx"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#2E3192] hover:text-[#74ACDF] transition-colors"
