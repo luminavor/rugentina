@@ -21,7 +21,7 @@ export default function LandingPage() {
       <main className="flex-grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-[#2E3192]">
-            Take a trip to $RUGENTINA - a community-driven memecoin deployed on Yapster.
+            Take a trip to $RUGENTINA<br></br>a community-driven memecoin deployed on Yapster.
           </h1>
           <div className="flex justify-center space-x-6">
             <Link
