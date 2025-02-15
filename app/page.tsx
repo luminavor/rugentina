@@ -1,10 +1,21 @@
-import { Twitter, Send } from "lucide-react"
+"use client"
+import { Twitter, Send, Copy, Check } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
+
 
 export default function LandingPage() {
+  const [copied, setCopied] = useState(false)
+  const contractAddress = "9sdF2CDR528wehEAAzc4xYZhK34PY9sNPCiELMzsXU8M"
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(contractAddress)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#74ACDF] via-white to-[#74ACDF]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 w-full">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 w-full">
         <div className="relative w-full aspect-video">
           <video
             autoPlay
@@ -20,7 +31,16 @@ export default function LandingPage() {
       </div>
       <main className="flex-grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-[#2E3192]">
+        <div className="flex items-center justify-center gap-2 mb-8">
+            <h2 className="text-xl font-bold text-[#2E3192]">{contractAddress}</h2>
+            <button
+              onClick={handleCopy}
+              className="p-2 hover:bg-[#74ACDF]/10 rounded-full transition-colors"
+              aria-label="Copy contract address"
+            >
+              {copied ? <Check className="w-5 h-5 text-green-500" /> : <Copy className="w-5 h-5 text-[#2E3192]" />}
+            </button>
+          </div>          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-[#2E3192]">
             Take a trip to $RUGENTINA<br></br>a community-driven memecoin deployed on Yapster.
           </h1>
           <div className="flex justify-center space-x-6">
